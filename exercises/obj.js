@@ -8,8 +8,14 @@
  */
 
 // Your code :
+let obj = {}
+obj.bool = false;
+obj.num = 42;
+obj.str = "1337";
+obj.undef = undefined;
 
 //* Begin of tests
+
 const assert = require('assert')
 
 assert.strictEqual(typeof obj, 'object')
