@@ -8,6 +8,8 @@
  */
 
 // Provided code :
+
+
 const sourceObject = {
   num: 42,
   bool: true,
@@ -16,6 +18,13 @@ const sourceObject = {
 }
 
 // Your code :
+
+function get (param){
+  return sourceObject[param];
+}
+
+
+
 
 //* Begin of tests
 const assert = require('assert')

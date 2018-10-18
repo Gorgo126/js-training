@@ -9,6 +9,12 @@
 
 // Your code :
 
+function getLast (param1){
+    return(param1.slice(-1))[0];
+    
+    
+} 
+
 //* Begin of tests
 const assert = require('assert')
 
