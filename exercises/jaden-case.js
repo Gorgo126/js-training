@@ -11,9 +11,24 @@
  */
 
 
+const jadenCase = (param) => {
+    return param
+      .split(' ')
+      .map(word => {
+        return word[0].toUpperCase() + word.slice(1)
+      })
+      .join(' ')
+  }
+  
 
-//* Begin of tests
-const assert = require('assert')
 
-assert.fail('You must write your own tests')
+  //* Begin of tests
+  const assert = require('assert')
+  
+  assert.strictEqual(jadenCase("lol"), "Lol")
+  assert.strictEqual(jadenCase("haha hihi"), "Haha Hihi")
+  assert.strictEqual(jadenCase("haha Hihi"), "Haha Hihi")
+  assert.strictEqual(jadenCase("ABC ABC"), "ABC ABC")
+
+
 // End of tests */

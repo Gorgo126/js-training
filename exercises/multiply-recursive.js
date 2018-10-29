@@ -11,6 +11,41 @@
 
 // Your code :
 
+const multiplyPlain = (number, otherNumber) => {
+	let result = 0;
+	const otherNumberPositive = !!(otherNumber >= 0)
+	const numberOfAdditions = otherNumberPositive ? otherNumber : -otherNumber
+	for (let i = 0; i < numberOfAdditions; i++) {
+	  result  = result + number
+	}
+	if (result === -0) {
+	  return 0
+	}
+	return otherNumberPositive ? result : -result
+  }
+  
+  const multiply = (number, multiplier) => {
+	if (number === 0 || multiplier === 0) {
+	  return 0
+	}
+	const isMultiplierNegative = multiplier < 0
+	const multiplierAbsoluteValue = isMultiplierNegative ? -multiplier : multiplier
+	if (multiplierAbsoluteValue === 1) {
+	  return number
+	}
+	const resultAbsoluteValue = number + multiply(number, multiplierAbsoluteValue - 1)
+	return isMultiplierNegative ? -resultAbsoluteValue : resultAbsoluteValue
+  }
+  
+
+
+
+
+
+
+
+
+
 //* Begin of tests
 const assert = require('assert')
 
@@ -29,3 +64,32 @@ assert.strictEqual(multiply(123, -22), -2706)
 assert.strictEqual(multiply(-22, 123), -2706)
 assert.strictEqual(multiply(-22, -123), 2706)
 // End of tests */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

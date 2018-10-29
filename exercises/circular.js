@@ -9,8 +9,11 @@
 
 // Your code :
 
-let object = {};
-object.circular = {circular:"circular"};
+let circular = {};
+circular.circular = circular;
+
+
+
 
 
 //* Begin of tests
